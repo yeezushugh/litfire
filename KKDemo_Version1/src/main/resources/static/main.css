@@ -1,0 +1,581 @@
+body {
+    background-color: green;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color: black;
+        margin: 0;
+    }
+}
+
+@media (min-width:600px) and (max-width: 1080px) {
+    body {
+        z-index: 0;
+        background-color: #085cbc;
+        margin: 0;
+        height: 100%;
+    }
+    .mainHeader{
+        z-index: 1;
+        height: 10rem;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        background-color: #085cbc;
+    }
+
+    .mainHeader .userContainer{
+        height: 10rem;
+        width: 30%;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+    }
+    .mainHeader .pageInfoContainer{
+        height: 10rem;
+        width: 40%;
+        display: inline-block;
+        position: absolute;
+        left: 30%;
+    }
+    .mainHeader .pageInfoContainer .caption{
+        position: absolute;
+        width: fit-content;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+    .mainHeader .functionContainer{
+        height: 10rem;
+        width: 30%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+    .mainContainer{
+        z-index: 1;
+        background-color: white;
+        position: fixed;
+        top: 10rem;
+        width: 100%;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .mainContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .mainContainer {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+
+    /* Container for reminder list */
+    .reminderListContainer{
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        overflow-y: scroll;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .reminderListContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .reminderListContainer {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .reminderList{
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+
+
+    /* Reminder item */
+    .reminderItem{
+        z-index: 1;
+        height: fit-content;
+        position: relative;
+        width: 100%;
+    }
+
+    .reminderItem .breaker{
+        border-bottom-style: solid;
+        border-width: 2px;
+        width: 70%;
+        position: absolute;
+        left: 15%;
+    }
+
+    /* Reminder function Bar*/
+    .reminderFunctionBar{
+        z-index: 1;
+        position: absolute;
+        height: 12rem;
+        width: 100%;
+        left: 0px;
+    }
+
+    /* Base for reminderIconContainer reminderContent reminderFlagContainer *******************************************/
+    .reminderBaseContainer{
+        z-index: 1;
+        display: block;
+        position: absolute;
+        height: 12rem;
+        width: 100%;
+        background-color: black;
+    }
+    .reminderFunctionBarDelete{
+        z-index: 1;
+        display: block;
+        position: absolute;
+        right: 0px;
+        height: 12rem;
+        width: 50px;
+        background-color: crimson;
+    }
+    .reminderContentContainer{
+        z-index: 2;
+        display: block;
+        position: relative;
+        height: 12rem;
+        width: 100%;
+        background-color: #085cbc;
+    }
+    /* Reminder item Icon*/
+    .reminderIconContainer{
+        z-index: 2;
+        position: absolute;
+        left: 0px;
+        height: 12rem;
+        width: 10rem;
+        display: inline-block;
+    }
+
+    /* Reminder Icon for user avtar*/
+    .reminderIcon{
+        z-index: 2;
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        left: 2rem;
+        top: 1rem;
+    }
+    /* Reminder Content*/
+    .reminderContent{
+        z-index: 2;
+        position: absolute;
+        left: 10rem;
+        margin-top: 0px;
+        height: 12rem;
+        width:20rem;
+        display: inline-block;
+    }
+
+    .reminderContentCaption{
+        z-index: 2;
+        margin-top: 1rem;
+        margin-left: 8px;
+        height: 6rem;
+        line-height: 6rem;
+        width:10rem;
+    }
+    .reminderCaptionText{
+        z-index: 2;
+        font-size: 3rem;
+        font-weight: 600;
+        display: inline;
+    }
+    .reminderContentTime{
+        z-index: 2;
+        margin-top: 6px;
+        margin-left: 12px;
+        font-size: 2rem;
+        height: 4rem;
+        width:10rem;
+    }
+    /* Reminder Flag*/
+    .reminderFlagContainer{
+        z-index: 2;
+        position: absolute;
+        right: 0px;
+        height: 12rem;
+        width:10rem;
+        display: inline-block;
+    }
+
+    /*  Region Footer Function Bar*************************************************************************************/
+    .mainFunctionBar{
+        z-index: 1;
+        height: 15rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+    }
+    .mainFunctionBarButton{
+        z-index: auto;
+        position: absolute;
+        height: 15rem;
+        width: 100%;
+        right: 0px;
+        background-color: #085cbc;
+    }
+    .mainFunctionBarButton .caption{
+        font-size: 8rem;
+        font-weight: 600;
+        color: white;
+        line-height: 15rem;
+        width: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    /*  end of Region Footer Function Bar******************************************************************************/
+
+    .mainReminderWholeContainer{
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+    }
+    .mainReminderMask{
+        z-index: 3;
+        width: 100%;
+        position: absolute;
+    }
+    .mainReminderDetailContainer{
+        z-index: 3;
+        width: 100%;
+        height: 40rem;
+        position: absolute;
+        bottom: 0rem;
+        background-color: crimson;
+    }
+
+
+
+
+
+
+
+    /* add reminder detail page ***************************************************************************************/
+    .addReminderWholeContainer{
+        z-index: 3;
+        background-color: #085cbc;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -100%;
+        overflow-y: auto;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .addReminderWholeContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .addReminderWholeContainer {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .addReminderHeader{
+        z-index: 3;
+        height: 10rem;
+        width: 100%;
+        position: relative;
+        top: 0px;
+    }
+
+    .addReminderHeaderClose{
+        z-index: 3;
+        height: 10rem;
+        width: 20rem;
+        position: absolute;
+        display: inline-block;
+        top: 0px;
+        left: 0px;
+    }
+    .addReminderDetailContainer{
+        z-index: 3;
+        height: 10rem;
+        width: 100%;
+        position: relative;
+        top: 10rem;
+    }
+    .addReminderDetailFooterContainer{
+        z-index: 3;
+        height: 20rem;
+        width: 100%;
+        position: relative;
+        bottom: 0px;
+    }
+    .addReminderDetailFooterContainer .buttonContainer{
+        z-index: 3;
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    .addReminderDetailFooterContainer .addButton{
+        z-index: 3;
+        height: 10rem;
+        width: 20rem;
+        border-radius: 0.4rem;
+        font-size: 5rem;
+        font-weight: 600;
+        background-color: #087c3c;
+        line-height: 1.5;
+        margin-bottom: 28px;
+        -webkit-appearance: none;
+        border: 2px solid transparent;
+        box-shadow: 0 4px 0 #00401e;
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        margin-top: 0;
+        padding: 12px 16px;
+        position: relative;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .titleInputContainer{
+        z-index: 4;
+        height: 10rem;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+    .titleInputContainer .titleContainer{
+        z-index: 4;
+        height: 4rem;
+        width: 80%;
+        display: block;
+    }
+    .titleInputContainer .titleContainer .title{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+    .titleInputContainer  input{
+        z-index: 4;
+        height: 6rem;
+        width: 100%;
+        position: absolute;
+        font-size: 3rem;
+    }
+
+
+
+    .addReminderDetailContainer .detailCaptionContainer{
+        z-index: 3;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+    .addReminderDetailContainer .detailFolderContainer{
+        z-index: 3;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+    .addReminderDetailContainer .detailToggleContainer{
+        z-index: 3;
+        height: 30rem;
+        width: 100%;
+        position: relative;
+    }
+    .addReminderDetailContainer .detailTextContainer{
+        z-index: 3;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+    .addReminderDetailContainer .detailURLContainer{
+        z-index: 3;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Detail toggle **************************************************************************************************/
+
+    .toggleTitleInputContainer{
+        z-index: 4;
+        height: 10rem;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+    .toggleTitleInputContainer .titleContainer{
+        z-index: 4;
+        height: 10rem;
+        width: 20%;
+        display: inline-block;
+    }
+    .toggleTitleInputContainer .titleContainer .title{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+    .toggleTitleInputContainer .toggleButton{
+        z-index: 4;
+        height: 6rem;
+        width: 60%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+    /* End of Detail toggle *******************************************************************************************/
+
+    /* Date input *****************************************************************************************************/
+    .addReminderDetailContainer .detailTimeContainer{
+        z-index: 3;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+    .dateTitleInputContainer{
+        z-index: 4;
+        height: 10rem;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+    .dateTitleInputContainer .titleContainer{
+        z-index: 4;
+        height: 10rem;
+        width: 20%;
+        display: inline-block;
+    }
+    .dateTitleInputContainer .titleContainer .title{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+    .dateTitleInputContainer input{
+        z-index: 4;
+        height: 6rem;
+        width: 60%;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        font-size: 3rem;
+    }
+    /* Date input *****************************************************************************************************/
+
+    /* Target User input **********************************************************************************************/
+    .addReminderDetailContainer .detailTargetContainer{
+        z-index: 3;
+        height: 20rem;
+        width: 100%;
+        position: relative;
+    }
+    .titleInputContainer{
+        z-index: 4;
+        height: 15rem;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+    .titleInputContainer .titleContainer{
+        z-index: 4;
+        height: 4rem;
+        width: 80%;
+        display: block;
+    }
+    .titleInputContainer .titleContainer .title{
+        font-size: 3rem;
+        font-weight: 600;
+        color: white;
+    }
+    .titleInputContainer  input{
+        z-index: 4;
+        height: 6rem;
+        width: 100%;
+        position: absolute;
+        font-size: 3rem;
+    }
+    /* Target User input **********************************************************************************************/
+
+    /* Flag input *****************************************************************************************************/
+    .addReminderDetailContainer .detailFlagContainer{
+        z-index: 3;
+        height: 20rem;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Flag input *****************************************************************************************************/
+    /* End of add reminder detail page ********************************************************************************/
+}
+
+@media (min-width:1080px) and (max-width: 1920px) {
+    body {
+        margin: 0;
+        height: 100%;
+    }
+
+    .mainHeader{
+        height: 5rem;
+        width: 100%;
+        margin-top: 0;
+
+        background-color: cadetblue;
+    }
+
+    .mainContainer{
+        background-color: white;
+        width: 100%;
+        position: fixed;
+        top: 5rem;
+    }
+
+    .mainFunctionBar{
+        height: 5rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        background-color: cadetblue;
+    }
+}
